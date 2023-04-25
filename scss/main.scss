@@ -1,0 +1,17 @@
+@import 'navs.scss';
+@import 'fonts.scss';
+
+
+.centrar{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    .terciario img{
+        width: 250px;
+    }
+    margin: 5px 0 5px 0;
+}
+.secundario img{
+    width: 500px;
+}
