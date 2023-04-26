@@ -2,6 +2,8 @@
 @import 'fonts.scss';
 
 
+/* --- INDEX --- */
+
 .centrar{
     display: flex;
     justify-content: center;
@@ -14,4 +16,118 @@
 }
 .secundario img{
     width: 500px;
+}
+
+
+/* --- Sembradoras-Pierobon --- */
+
+.texto{
+    display: flex;
+    h3{
+        text-align: center;
+        margin: 0 10px 0 10px;
+    }
+    margin: 5px;
+    flex-direction: column;
+}
+.sembradoras-seccion1{
+    display: flex;
+    margin: 20px 5px 5px 5px;
+}
+.sembradoras-seccion2{
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 20px 5px 5px 5px;
+}
+
+
+/* --- Repuestos Pierobon --- */
+.repuestos img{
+    margin: 15px;
+    width: 350px;
+}
+
+.repuestos-titulo{
+    display: flex;
+    margin: 15px;
+    flex-direction: column;
+    align-items: center;
+}
+.repuestos-titulo h1{
+    font-size: 50px;
+    color: rgb(0, 112, 0);
+    margin: 0 0 15px 0;
+}
+
+.repuestos-seccion1{
+    display: flex;
+    align-items: center;
+    border: 2px solid rgb(0, 112, 0);
+}
+.repuestos-seccion2{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    border: 2px solid rgb(0, 112, 0);
+}
+.repuestos-seccion3{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 2px solid rgb(0, 112, 0);
+}
+
+/* --- Otra maquinaria --- */
+.maquinaria img{
+    width: 400px;
+    margin: 15px;
+}
+.maquinaria p{
+    margin: 5px;
+}
+.maquinaria-titulo{
+    font-size: 30px;
+    color: rgb(0, 112, 0);
+    margin: 0 0 15px 0;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.maquinaria-seccion1{
+    display: flex;
+    align-items: center;
+    border: 2px solid rgb(0, 112, 0);
+}
+.maquinaria-seccion2{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    border: 2px solid rgb(0, 112, 0);
+}
+.maquinaria-seccion3{
+    display: flex;
+    align-items: center;
+    border: 2px solid rgb(0, 112, 0);
+}
+.maquinaria-seccion4{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    border: 2px solid rgb(0, 112, 0);
+}
+
+
+/* --- Contacto --- */
+
+.contacto img{
+    width: 1000px;
+    margin: 0 0 20px 0;
+}
+.contacto h1{
+    margin: 40px 0 15px 0;
+}
+.contacto h2{
+    margin: 35px 0 15px 0;
+    color: rgb(0, 92, 0);
 }
