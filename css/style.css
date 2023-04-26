@@ -62,11 +62,10 @@
   margin: 15px;
   flex-direction: column;
   align-items: center; }
-
-.repuestos-titulo h1 {
-  font-size: 50px;
-  color: #007000;
-  margin: 0 0 15px 0; }
+  .repuestos-titulo h1 {
+    font-size: 50px;
+    color: #007000;
+    margin: 0 0 15px 0; }
 
 .repuestos-seccion1 {
   display: flex;
@@ -135,3 +134,34 @@
 .contacto h2 {
   margin: 35px 0 15px 0;
   color: #005c00; }
+
+/* --- RESPOSNIVE --- */
+@media (max-width: 768px) {
+  .primario img {
+    width: 550px; }
+  .secundario img {
+    width: 400px; }
+  /* Sembradoras */
+  .sembradoras-seccion1 img {
+    width: 370px; }
+  .sembradoras-seccion2 img {
+    width: 370px; } }
+
+@media (max-width: 600px) {
+  .secundario {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .secundario img {
+      margin-top: 30px; }
+  .terciario {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  /* Sembradoras */
+  .sembradoras-seccion1 {
+    flex-direction: column;
+    align-items: center; }
+  .sembradoras-seccion2 {
+    flex-direction: column;
+    align-items: center; } }
