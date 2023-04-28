@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&display=swap");
+@import url(animate.css);
 .navs-color {
   background: linear-gradient(90deg, #007a3f 0%, #007a3f 30%, #ffd200 100%); }
 
@@ -10,10 +11,14 @@
   /* FOOTER */ }
   .navbar .navs-header img {
     width: 110px; }
-  .navbar .navbar-collapse {
+  .navbar .navbar-letras {
     flex-direction: row-reverse; }
-    .navbar .navbar-collapse li {
+    .navbar .navbar-letras li {
       margin-right: 10px !important; }
+    .navbar .navbar-letras .nav-item a {
+      transition: font-size 0.2s linear 0s; }
+      .navbar .navbar-letras .nav-item a:hover {
+        font-size: x-large; }
   .navbar .navs-footer {
     display: flex;
     justify-content: center; }
@@ -21,12 +26,31 @@
       width: 60px;
       margin: auto 35px auto 35px; }
 
+/* --- RESPOSNIVE --- */
+@media (max-width: 768px) {
+  .navs-color {
+    background: #007a3f;
+    background: radial-gradient(circle, #007a3f 0%, #007a3f 30%, #ffd200 100%); }
+  .navs-header {
+    justify-content: center !important; }
+  .navbar-nav {
+    flex-direction: row !important; } }
+
+@media (max-width: 425px) {
+  .navs-color {
+    background: #007a3f;
+    background: linear-gradient(180deg, #007a3f 0%, #007a3f 63%, #ffd200 85%); }
+  .navbar {
+    font-size: 15px;
+    text-align: center; } }
+
 /* --- INDEX --- */
 .centrar {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   margin: 5px 0 5px 0; }
   .centrar .terciario img {
     width: 250px; }
@@ -140,28 +164,43 @@
   .primario img {
     width: 550px; }
   .secundario img {
-    width: 400px; }
+    width: 380px; }
   /* Sembradoras */
   .sembradoras-seccion1 img {
     width: 370px; }
   .sembradoras-seccion2 img {
     width: 370px; } }
 
-@media (max-width: 600px) {
+@media (max-width: 425px) {
+  .primario img {
+    width: 410px; }
   .secundario {
+    border-top: 4px double #b3b3b3;
     display: flex;
     flex-direction: column;
     align-items: center; }
     .secundario img {
-      margin-top: 30px; }
+      margin-top: 30px;
+      width: 300px; }
+    .secundario .col-5 {
+      width: 410px; }
   .terciario {
+    border-top: 4px double #b3b3b3;
     display: flex;
     flex-direction: column;
     align-items: center; }
+    .terciario .col-4 {
+      width: 410px; }
+    .terciario h4 {
+      text-align: center; }
   /* Sembradoras */
   .sembradoras-seccion1 {
     flex-direction: column;
     align-items: center; }
   .sembradoras-seccion2 {
+    padding-top: 10px;
+    border-top: 4px double #b3b3b3;
     flex-direction: column;
-    align-items: center; } }
+    align-items: center; }
+    .sembradoras-seccion2 img {
+      padding-bottom: 5px; } }
