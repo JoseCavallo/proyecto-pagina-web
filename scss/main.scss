@@ -2,6 +2,16 @@
 @import 'fonts.scss';
 @import 'animate.css';
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.row{
+    margin: 0!important;
+    padding: 0!important;
+}
+
 
 /* --- INDEX --- */
 
@@ -11,36 +21,39 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    .terciario img{
-        width: 250px;
-    }
     margin: 5px 0 5px 0;
+    .terciario img{
+        width: 100%;
+    }
 }
-.secundario img{
-    width: 500px;
+.secundario {
+    img{
+        width: 80%;
+    }
+    h1{
+        width: 100%;
+    }
+    p {
+        width: 100%;
+    }
+}
+.primario {
+    img{
+        width: 95%;
+        margin-bottom: 15px;
+    }
 }
 
 
 /* --- Sembradoras-Pierobon --- */
 
-.texto{
+.col-6{
     display: flex;
-    h3{
-        text-align: center;
-        margin: 0 10px 0 10px;
-    }
-    margin: 5px;
     flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 10px 0 10px 0;
 }
-.sembradoras-seccion1{
-    display: flex;
-    margin: 20px 5px 5px 5px;
-}
-.sembradoras-seccion2{
-    display: flex;
-    flex-direction: row-reverse;
-    margin: 20px 5px 5px 5px;
-}
+
 
 
 /* --- Repuestos Pierobon --- */
@@ -120,6 +133,7 @@
 }
 
 
+
 /* --- Contacto --- */
 
 .contacto {
@@ -141,70 +155,14 @@
 /* --- RESPOSNIVE --- */
 
 @media (max-width: 768px){
-    .primario img{
-        width: 550px;
-    }
-    .secundario img{
-        width: 380px;
-    }
-    /* Sembradoras */
-    .sembradoras-seccion1{
-        img{
-            width: 370px;
-        }
-    }
-    .sembradoras-seccion2{
-        img{
-            width: 370px;
-        }
-    }
-}
-@media (max-width: 425px){
-    .primario{
-        img{
-            width: 410px;
-        }
-    }
-
-    .secundario{
-        border-top: 4px double rgb(179, 179, 179);
-        display: flex;
+    .responsive-columna{
         flex-direction: column;
         align-items: center;
-        img{
-            margin-top: 30px;
-            width: 300px;
+        .centrar{
+            width: 95%;
         }
-        .col-5{
-            width: 410px;
-        }
-    }
-
-    .terciario{
-        border-top: 4px double rgb(179, 179, 179);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        .col-4{
-            width: 410px;
-        }
-        h4{
-            text-align: center;
-        }
-    }
-    /* Sembradoras */
-
-    .sembradoras-seccion1{
-        flex-direction: column;
-        align-items: center;
-    }
-    .sembradoras-seccion2{
-        padding-top: 10px;
-        border-top: 4px double rgb(179, 179, 179);
-        flex-direction: column;
-        align-items: center;
-        img{
-            padding-bottom: 5px;
+        .col-6{
+            width: 100%!important;
         }
     }
 }

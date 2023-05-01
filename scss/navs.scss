@@ -6,21 +6,19 @@
     /* HEADER */
     font-family: 'Open Sans', sans-serif;
     font-weight: bolder;
-    font-size: larger;
     .navs-header img{
-        width: 110px;
-        
+        width: 110px; 
     }
     .navbar-letras{
         flex-direction: row-reverse;
-        li{
-            margin-right: 10px!important;
-        }
-        .nav-item a{
-            transition: font-size 0.2s linear 0s;
-            &:hover{
+        .nav-item a:hover{
+                transition: font-size 0.2s linear 0s;
                 font-size: x-large;
             }
+        }
+        a{
+            padding-right: 10px;
+            max-width: 100%;
         }
     }
 
@@ -34,8 +32,6 @@
         }
     }
 
-}
-
 /* --- RESPOSNIVE --- */
 
 @media (max-width: 768px){
@@ -45,6 +41,7 @@
     }
     .navs-header{
         justify-content: center!important;
+        flex-direction: column;
     }
     .navbar-nav{
         flex-direction: row!important;
@@ -54,10 +51,11 @@
 @media (max-width: 425px){
     .navs-color{
         background: rgb(0,122,63);
-    background: linear-gradient(180deg, rgba(0,122,63,1) 0%, rgba(0,122,63,1) 63%, rgba(255,210,0,1) 85%);
+        background: linear-gradient(180deg, rgba(0,122,63,1) 0%, rgba(0,122,63,1) 63%, rgba(255,210,0,1) 85%);
     }
     .navbar{
-        font-size: 15px;
-        text-align: center;
+        a{
+            font-size: 72%!important;
+        }
     }
 }

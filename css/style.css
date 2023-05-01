@@ -6,25 +6,25 @@
 .navbar {
   /* HEADER */
   font-family: 'Open Sans', sans-serif;
-  font-weight: bolder;
-  font-size: larger;
-  /* FOOTER */ }
+  font-weight: bolder; }
   .navbar .navs-header img {
     width: 110px; }
   .navbar .navbar-letras {
     flex-direction: row-reverse; }
-    .navbar .navbar-letras li {
-      margin-right: 10px !important; }
-    .navbar .navbar-letras .nav-item a {
-      transition: font-size 0.2s linear 0s; }
-      .navbar .navbar-letras .nav-item a:hover {
-        font-size: x-large; }
-  .navbar .navs-footer {
-    display: flex;
-    justify-content: center; }
-    .navbar .navs-footer img {
-      width: 60px;
-      margin: auto 35px auto 35px; }
+    .navbar .navbar-letras .nav-item a:hover {
+      transition: font-size 0.2s linear 0s;
+      font-size: x-large; }
+  .navbar a {
+    padding-right: 10px;
+    max-width: 100%; }
+
+/* FOOTER */
+.navs-footer {
+  display: flex;
+  justify-content: center; }
+  .navs-footer img {
+    width: 60px;
+    margin: auto 35px auto 35px; }
 
 /* --- RESPOSNIVE --- */
 @media (max-width: 768px) {
@@ -32,7 +32,8 @@
     background: #007a3f;
     background: radial-gradient(circle, #007a3f 0%, #007a3f 30%, #ffd200 100%); }
   .navs-header {
-    justify-content: center !important; }
+    justify-content: center !important;
+    flex-direction: column; }
   .navbar-nav {
     flex-direction: row !important; } }
 
@@ -40,9 +41,16 @@
   .navs-color {
     background: #007a3f;
     background: linear-gradient(180deg, #007a3f 0%, #007a3f 63%, #ffd200 85%); }
-  .navbar {
-    font-size: 15px;
-    text-align: center; } }
+  .navbar a {
+    font-size: 72% !important; } }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+.row {
+  margin: 0 !important;
+  padding: 0 !important; }
 
 /* --- INDEX --- */
 .centrar {
@@ -53,28 +61,27 @@
   text-align: center;
   margin: 5px 0 5px 0; }
   .centrar .terciario img {
-    width: 250px; }
+    width: 100%; }
 
 .secundario img {
-  width: 500px; }
+  width: 80%; }
+
+.secundario h1 {
+  width: 100%; }
+
+.secundario p {
+  width: 100%; }
+
+.primario img {
+  width: 95%;
+  margin-bottom: 15px; }
 
 /* --- Sembradoras-Pierobon --- */
-.texto {
+.col-6 {
   display: flex;
-  margin: 5px;
-  flex-direction: column; }
-  .texto h3 {
-    text-align: center;
-    margin: 0 10px 0 10px; }
-
-.sembradoras-seccion1 {
-  display: flex;
-  margin: 20px 5px 5px 5px; }
-
-.sembradoras-seccion2 {
-  display: flex;
-  flex-direction: row-reverse;
-  margin: 20px 5px 5px 5px; }
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 10px 0 10px 0; }
 
 /* --- Repuestos Pierobon --- */
 .repuestos img {
@@ -161,46 +168,10 @@
 
 /* --- RESPOSNIVE --- */
 @media (max-width: 768px) {
-  .primario img {
-    width: 550px; }
-  .secundario img {
-    width: 380px; }
-  /* Sembradoras */
-  .sembradoras-seccion1 img {
-    width: 370px; }
-  .sembradoras-seccion2 img {
-    width: 370px; } }
-
-@media (max-width: 425px) {
-  .primario img {
-    width: 410px; }
-  .secundario {
-    border-top: 4px double #b3b3b3;
-    display: flex;
+  .responsive-columna {
     flex-direction: column;
     align-items: center; }
-    .secundario img {
-      margin-top: 30px;
-      width: 300px; }
-    .secundario .col-5 {
-      width: 410px; }
-  .terciario {
-    border-top: 4px double #b3b3b3;
-    display: flex;
-    flex-direction: column;
-    align-items: center; }
-    .terciario .col-4 {
-      width: 410px; }
-    .terciario h4 {
-      text-align: center; }
-  /* Sembradoras */
-  .sembradoras-seccion1 {
-    flex-direction: column;
-    align-items: center; }
-  .sembradoras-seccion2 {
-    padding-top: 10px;
-    border-top: 4px double #b3b3b3;
-    flex-direction: column;
-    align-items: center; }
-    .sembradoras-seccion2 img {
-      padding-bottom: 5px; } }
+    .responsive-columna .centrar {
+      width: 95%; }
+    .responsive-columna .col-6 {
+      width: 100% !important; } }
