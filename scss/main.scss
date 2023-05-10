@@ -22,25 +22,16 @@
     align-items: center;
     text-align: center;
     margin: 5px 0 5px 0;
-    .terciario img{
-        width: 100%;
-    }
 }
-.secundario {
-    img{
-        width: 80%;
-    }
-    h1{
-        width: 100%;
-    }
-    p {
-        width: 100%;
-    }
-}
-.primario {
+.main__primario {
+    margin-bottom: 15px;
     img{
         width: 95%;
-        margin-bottom: 15px;
+    }
+}
+.main__secundario {
+    img{
+        width: 80%;
     }
 }
 
@@ -55,106 +46,121 @@
 }
 
 
-
 /* --- Repuestos Pierobon --- */
-.repuestos img{
-    margin: 15px;
-    width: 350px;
-}
-
-.repuestos-titulo{
-    display: flex;
-    margin: 15px;
-    flex-direction: column;
-    align-items: center;
-    h1{
-        font-size: 50px;
-        color: rgb(0, 112, 0);
-        margin: 0 0 15px 0;
+.repuestos {
+    img{
+        margin: 15px;
+        width: 350px;
+    }
+    .repuestos__titulo{
+        margin: 15px;
+        text-align: center;
+        h1{
+            font-size: 50px;
+            color: rgb(0, 112, 0);
+            margin: 0 0 15px 0;
+        }
+    }
+    .repuestos__seccion--uno{
+        
+        border-bottom: 4px double rgb(0, 112, 0);
+    }
+    .repuestos__seccion--dos{
+        
+        border: 2px solid rgb(0, 112, 0);
     }
 }
 
-.repuestos-seccion1{
-    display: flex;
-    align-items: center;
-    border: 2px solid rgb(0, 112, 0);
-}
-.repuestos-seccion2{
-    display: flex;
-    align-items: center;
-    flex-direction: row-reverse;
-    border: 2px solid rgb(0, 112, 0);
-}
-.repuestos-seccion3{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    border: 2px solid rgb(0, 112, 0);
-}
+
 
 /* --- Otra maquinaria --- */
-.maquinaria img{
-    width: 400px;
-    margin: 15px;
+.maquinaria 
+    img{
+        width: 400px;
+        margin: 15px;
+    p{
+        margin: 5px;
+    }
 }
-.maquinaria p{
-    margin: 5px;
-}
-.maquinaria-titulo{
+.maquinaria__titulo{
     font-size: 30px;
     color: rgb(0, 112, 0);
-    margin: 0 0 15px 0;
-    margin: 15px;
+    margin: 15px 0 35px 0;
+    text-align: center;
+    
+}
+.row{
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+.col-5{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.maquinaria-seccion1{
-    display: flex;
-    align-items: center;
-    border: 2px solid rgb(0, 112, 0);
+.maquinaria__seccion--impar{
+    border-bottom: 4px double green;
 }
-.maquinaria-seccion2{
-    display: flex;
-    align-items: center;
+.maquinaria__seccion--par{
     flex-direction: row-reverse;
-    border: 2px solid rgb(0, 112, 0);
+    border-bottom: 4px double green;
 }
-.maquinaria-seccion3{
-    display: flex;
-    align-items: center;
-    border: 2px solid rgb(0, 112, 0);
-}
-.maquinaria-seccion4{
-    display: flex;
-    align-items: center;
-    flex-direction: row-reverse;
-    border: 2px solid rgb(0, 112, 0);
-}
+
 
 
 
 /* --- Contacto --- */
 
-.contacto {
-    img{
-        width: 1000px;
-        margin: 0 0 20px 0;
+
+.contacto { 
+    display: grid;
+    grid-template-columns: 0.75fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "contacto__titulo contacto__titulo"
+        "contacto__informacion contacto__imagen"
+        "contacto__google-maps contacto__imagen";
+
+    .contacto__informacion { 
+        grid-area: contacto__informacion;
     }
-    h1{
+
+    .contacto__titulo {
+        grid-area: contacto__titulo;
         margin: 40px 0 15px 0;
+        text-align: center;
+        align-items: center;
+        display: block;
+        font-size: x-large;
     }
-    h2{
-        margin: 35px 0 15px 0;
-        color: rgb(0, 92, 0);
+
+    .contacto__google-maps{
+        grid-area: contacto__google-maps;
+    }
+
+    .contacto__imagen {
+        text-align: center;
+        grid-area: contacto__imagen;
+        margin: auto;
+        width: 95%;
+        img{
+            width: 100%;
+        }
+        padding-bottom: 15px;
     }
 }
+
+
 
 
 
 /* --- RESPOSNIVE --- */
 
 @media (max-width: 768px){
+    // *** INDEX *** 
     .responsive-columna{
         flex-direction: column;
         align-items: center;
@@ -163,6 +169,63 @@
         }
         .col-6{
             width: 100%!important;
+        }
+    }
+    // *** REPUESTOS ***'
+    .col-4{
+        width: 95%!important;
+    }
+    .col-6{
+        width: 95%!important;
+    }
+    .col-2{
+        width: 95%!important;
+    }
+
+    // *** OTROS IMPLEMENTOS *** 
+    .maquinaria{
+        .col-5{
+            width: 100%;
+        }
+    }
+
+    // *** CONTACTO ***
+    .contacto{
+        display: grid;
+        grid-template-columns: 0.75fr 1fr;
+        grid-template-rows: 0.5fr 1fr 1fr;
+        grid-template-areas:
+            "contacto__titulo contacto__titulo"
+            "contacto__informacion contacto__google-maps"
+            "contacto__imagen contacto__imagen";
+        .contacto__google-maps{
+            .google-map{
+                width: 90%;
+            }
+        }
+    }
+    .button{
+        margin: 15px!important;
+    }
+}
+
+@media (max-width: 425px){
+    .contacto{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.7fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "contacto__titulo"
+            "contacto__informacion"
+            "contacto__google-maps"
+            "contacto__imagen";
+        .contacto__informacion{
+            font-size: x-large;
+            text-align: center;
+            margin-top: 25px;
+        }
+        .contacto__google-maps{
+            justify-self: center;
+            width: 80%;
         }
     }
 }

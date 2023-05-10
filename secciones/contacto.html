@@ -35,25 +35,36 @@
   </header>
 
   <main class="contacto">
-    <section>
-        <div class="contacto-titulo">
-            <h1>CONTACTANOS</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, ratione. Nam soluta pariatur modi quaerat? Cupiditate inventore quas quae explicabo odio, consequuntur provident sit excepturi aut quia, laboriosam et dolore nihil fugiat illum ut fugit? Deleniti itaque nobis amet voluptates harum, qui nostrum odit cum sunt! Repellendus, illo sapiente itaque consequuntur sunt atque possimus ipsa, alias accusantium animi sint fugiat.</p>
+    <section class="contacto__titulo">
+      <h1>Igual que hace medio siglo</h1>
+      <p>Nuestra empresa tambien es conocida como 'Enrique Cavallo e Hijo', llevamos mas de 55 años en el rubro del campo, y continuamos por sobre todo manteniendo los valores buenos con los que Enrique Cavallo creo su negocio. </p>
+    </section>
+    <section class="contacto__informacion">
+      <h2>Nuestros contactos</h2>
+        <p>GMail: xxxx@xxxxx.com</p>
+        <p>Celular 1: +54 9 xxxx-xxxxxx </p>
+        <p>Celular 2: +54 9 xxxx-xxxxxx </p>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Ingresar email</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="correo@ejemplo.com">
         </div>
-        <div class="">
-            <h2>Nuestros contactos</h2>
-            <p>GMail: xxxx@xxxxx.com</p>
-            <p>Celular 1: +54 9 xxxx-xxxxxx </p>
-            <p>Celular 2: +54 9 xxxx-xxxxxx </p>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Consulta</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Ingrese aqui su consulta"></textarea>
+          <div class="contacto__boton">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </div>
         </div>
     </section>
-    <section>
-        <h2>Nuestra ubicacion</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d849.8815076610983!2d-63.53094540000001!3d-31.5646198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94332baae48979b5%3A0xc6fa605cc6a39f13!2sPampa%20Nea%20S.A%20(Enrique%20Cavallo%20e%20hijo)!5e0!3m2!1ses-419!2sar!4v1680056934256!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <h2>TE ESPERAMOS!</h2>
-        <img src="../recursos/neogcio2.jpg" alt="">
+    <section class="contacto__google-maps">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d849.8815076610983!2d-63.53094540000001!3d-31.5646198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94332baae48979b5%3A0xc6fa605cc6a39f13!2sPampa%20Nea%20S.A%20(Enrique%20Cavallo%20e%20hijo)!5e0!3m2!1ses-419!2sar!4v1680056934256!5m2!1ses-419!2sar" class="google-map" width="100%" height="90%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
-</main>
+    <section class="contacto__imagen">
+      <h2>Te esperamos!</h2>
+      <img src="../recursos/neogcio2.jpg" alt="">
+    </section>
+  </main>
+
 
   <footer class="navbar navbar-expand-lg navs-color">
     <div class="container-fluid ">
